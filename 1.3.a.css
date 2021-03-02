@@ -1,0 +1,145 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  margin: 1rem auto;
+  width: 90%;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container.d-flex {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  width: 100%;
+}
+.section .d-flex {
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.col-left span {
+  text-transform: uppercase;
+}
+
+.square {
+  background-color: tomato;
+  color: white;
+  width: 7rem;
+  min-height: 7rem;
+}
+
+.square + div > h4 {
+  color: tomato;
+}
+
+.square.green {
+  background-color: rgb(91, 168, 91);
+}
+
+.square.green + div > h4 {
+  color: rgb(91, 168, 91);
+}
+
+.square.blue {
+  background-color: rgb(99, 169, 197);
+}
+
+.square.blue + div > h4 {
+  color: rgb(99, 169, 197);
+}
+
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-light {
+  font-weight: lighter;
+  margin: 0.3em;
+  font-size: 1.2rem;
+}
+
+.text-large {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.text-medium {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.space-around {
+  padding: 0.9rem;
+}
+
+.flex-1 span,
+h4 {
+  margin: 0.1rem 0rem 0.5rem 0rem;
+  /* padding: 0.3rem; */
+  width: 100%;
+}
+
+.content-blue {
+  background-color: transparent;
+  color: blue;
+}
+
+.content-center.content-blue {
+  background-color: blue;
+  color: white;
+}
+
+.square.content-center {
+}
+.section div:nth-child(2) {
+  background-color: white;
+}
+
+.btn {
+  border: 1px solid rgb(99, 169, 197);
+  padding: 0.6rem 1.5rem;
+  font-weight: bold;
+}
+
+.rounded-border {
+  border-radius: 2.5rem;
+}
+
+.background-main.reverse-color {
+  background-color: transparent;
+  color: rgb(99, 169, 197);
+}
+
+.padding-horizontal {
+  /* padding: 0rem 20rem; */
+}
+
+@media screen and (min-width: 961px) {
+  .section {
+    width: 50%;
+  }
+}

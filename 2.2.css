@@ -1,0 +1,86 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container-fluid {
+  background-image: url("bmw.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.over-lay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 0, 0, 0.3);
+  /* background-color: blueviolet; */
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.action a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.action a div {
+  display: inline-block;
+  border: 2.5px solid white;
+  padding: 0.7rem 1.2rem;
+  width: 10rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.text-large {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.over-lay span {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.over-lay span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+.over-lay span:nth-child(3) {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.container-fluid > a {
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: calc(50% - 50px);
+}
+
+.container-fluid > a + a {
+  left: auto;
+  right: 0;
+}
+
+.action a:first-child {
+  color: rgba(255, 255, 2552, 0.6);
+}
+
+.action a:first-child div {
+  border-color: rgba(255, 255, 2552, 0.6);
+}

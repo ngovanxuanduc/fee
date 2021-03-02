@@ -1,0 +1,85 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container-fluid {
+  margin: 0rem 1rem;
+  background-color: #f39c12;
+  color: white;
+}
+
+.section {
+  padding: 0.5rem 0.5rem;
+}
+
+.section h3 {
+  text-transform: uppercase;
+}
+.d-flex {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+form input {
+  padding: 0.5rem;
+}
+
+.container-fluid .section:first-child {
+  /* background-color: violet; */
+  flex: 1;
+}
+
+.container-fluid .section:nth-child(2) {
+  /* background-color: tomato; */
+  flex: 1;
+}
+.container-fluid .section:nth-child(3) {
+  /* background-color: yellowgreen; */
+  flex: 2;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f1 {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.f1 input {
+  width: 45%;
+}
+
+.full-size-parent {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.4rem;
+}
+form textarea {
+  padding: 0.5rem;
+}
+
+/* .container-fluid: nth-col(); */
+form button {
+  background-color: #2c3e50;
+  color: white;
+  padding: 0.7rem 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.section p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+form input,
+textarea,
+button {
+  border: none;
+}
