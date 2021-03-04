@@ -1,0 +1,18 @@
+html,
+body {
+  padding: 2rem;
+}
+
+hr {
+  border-top: 0.15rem solid #f12222;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #f12222;
+  background-color: #f12222;
+}
+
+label {
+  font-weight: 600;
+}

@@ -1,0 +1,66 @@
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+}
+
+.container-fluid {
+  background-image: url("bmw.png");
+  height: 50vh;
+  width: 50vw;
+  margin: auto auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action a {
+  display: inline-block;
+  padding: 1rem;
+}
+.action a .p-2 {
+  border-radius: 50%;
+  border: 1px solid #ffff;
+  padding: 1rem;
+}
+
+.over-lay h1,
+h3 {
+  text-transform: uppercase;
+  color: white;
+}
+.over-lay p {
+  color: white;
+  text-align: center;
+  width: 50%;
+}
+
+.action a:hover div {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.over-lay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+  opacity: 0;
+  transition-duration: 0.6s;
+}
+
+.over-lay:hover {
+  opacity: 1;
+}
