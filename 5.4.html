@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.4</title>
+    <script src="bootstrap-4.6.0/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="bootstrap-4.6.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.6.0/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form class="needs-validation" id="form">
+        <!-- <div class="form-group"> -->
+        <div class="form-group">
+          <label for="exampleInputEmail1">Full Name</label>
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter full name"
+              required
+            />
+            <div class="invalid-feedback">Please provide full name.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="birth-date" style="display: block">Birth Date</label>
+          <input
+            class="form-control"
+            type="date"
+            id="birth-date"
+            name="birth-date"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label class="form-group-label" for="gender">Gender</label>
+
+          <select class="custom-select" id="gender">
+            <option selected value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="btn btn-primary" id="btn-submit">Submit</div>
+      </form>
+      <div id="result" class="mt-5">
+        <div class="row">
+          <div class="col-4">
+            <h3>Full Name:</h3>
+          </div>
+          <div class="col-8">
+            <h3 id="result-name"></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <h3>Birth-Date:</h3>
+          </div>
+          <div class="col-8">
+            <h3 id="result-birth-date"></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <h3>Gender:</h3>
+          </div>
+          <div class="col-8">
+            <h3 id="result-gender"></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <script>
+      document.getElementById("btn-submit").addEventListener("click", () => {
+        let form = document.getElementById("form");
+        if (!form.checkValidity()) {
+          form.classList.add("was-validated");
+          return;
+        }
+
+        let name = document.getElementById("name").value;
+        let birthDate = document.getElementById("birth-date").value;
+        let gender = document.getElementById("gender").value;
+        // console.log(name, birthDate, gender);
+        document.getElementById("result-name").innerText = name;
+        document.getElementById("result-birth-date").innerText =
+          birthDate + " Age: " + _calculateAge(new Date(birthDate));
+        document.getElementById("result-gender").innerText = gender;
+      });
+
+      function _calculateAge(birthday) {
+        // birthday is a date
+        var ageDifMs = Date.now() - birthday.getTime();
+        var ageDate = new Date(ageDifMs); // miliseconds from epoch
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+      }
+    </script>
+  </body>
+</html>

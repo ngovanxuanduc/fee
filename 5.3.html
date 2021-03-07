@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.3</title>
+  </head>
+  <body>
+    <script>
+      var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      document.write("Mang: " + "[" + arr.join() + "]");
+      var logTitle = () =>
+        document.writeln(
+          "</br>------------------------------------------------------------------------</br>"
+        );
+
+      //   logTitle();
+      // -------------------------------------------------------------------------------------------------
+      var fun1 = (arr) => {
+        logTitle();
+        let evenNumbers = arr.filter((num) => num % 2 == 0);
+        let totalEvenNumbers = evenNumbers.reduce((sum, e) => {
+          return sum + e;
+        }, 0);
+        document.writeln(
+          "Viết hàm hiển thị danh sách các giá trị chẵn trong mảng và tổng các giá trị chẵn trong mảng: " +
+            "</br> Các phần tử chẵn: " +
+            evenNumbers.join() +
+            "</br> Tổng các phần tử chẵn: " +
+            totalEvenNumbers
+        );
+      };
+
+      // -------------------------------------------------------------------------------------------------
+      var fun2 = (arr) => {
+        logTitle();
+        let oddNumbers = arr.filter((num) => num % 2 != 0);
+        let totaloddNumbers = oddNumbers.reduce((sum, e) => {
+          return sum + e;
+        }, 0);
+        document.writeln(
+          "Viết hàm hiển thị danh sách các giá trị lẽ trong mảng và tổng các giá trị lẽ trong mảng: " +
+            "</br> Các phần tử chẵn: " +
+            oddNumbers.join() +
+            "</br> Tổng các phần tử chẵn: " +
+            totaloddNumbers
+        );
+      };
+
+      // -------------------------------------------------------------------------------------------------
+      var fun3 = (arr) => {
+        logTitle();
+        document.write(
+          "Viết hàm hiển thị danh sách các giá trị trong mảng ban đầu có giá trị nằm trong khoảng [a, b]. Trong đó, a và b nhập vào từ bàn phím và a ≥ b."
+        );
+        let a = prompt("Nhập a ", 0);
+        let b = prompt("Nhập b ", 0);
+        document.write("[a,b] = " + "[" + a + "," + b + "]");
+        if (isNaN(a) || isNaN(b)) {
+          document.write("</br>a hoặc b không phải số. vui lòng nhập lại");
+          return;
+        }
+        a = parseInt(a);
+        b = parseInt(b);
+        if (a < b) {
+          document.write("</br>Nhập a >= b | đề yêu cầu :))))))))");
+          return;
+        }
+        let res = arr.filter((num) => num <= a && num >= b);
+        document.write("</br> Các phần tử trong đoạn a b là: " + res.join());
+      };
+      // -------------------------------------------------------------------------------------------------
+      function quickSort(mang, l, r) {
+        let i = l,
+          j = r,
+          m = mang[parseInt((l + r) / 2)], // (l+r) /  2 ra le thi rang =))))
+          temp;
+        while (i <= j) {
+          while (mang[i] < m) i++;
+          while (mang[j] > m) j--;
+          if (i <= j) {
+            temp = mang[i];
+            mang[i] = mang[j];
+            mang[j] = temp;
+            i++;
+            j--;
+          }
+        }
+        if (l < j) quickSort(mang, l, j);
+        if (i < r) quickSort(mang, i, r);
+      }
+
+      // -------------------------------------------------------------------------------------------------
+      function selectionSort(mang) {
+        let n = mang.length;
+        for (let i = 0; i < n - 1; i++) {
+          for (let j = i + 1; j < n; j++) {
+            if (mang[i] > mang[j]) {
+              [mang[i], mang[j]] = [mang[j], mang[i]]; // cai nay ten gi quen roi :v
+            }
+          }
+        }
+      }
+
+      // fun1(arr);
+      // fun2(arr);
+      // fun3(arr);
+
+      let reverseArr = arr.reverse();
+      document.write("</br>" + reverseArr.join());
+      //   quickSort(reverseArr, 0, reverseArr.length - 1);
+      selectionSort(reverseArr);
+      document.write("</br>" + reverseArr.join());
+    </script>
+  </body>
+</html>

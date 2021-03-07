@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.2</title>
+  </head>
+  <body>
+    <script>
+      var str;
+      do {
+        str = prompt("Nhập vào chuỗi có độ dài lớn hơn 1: ", "");
+      } while (str.length < 2);
+
+      var firstLetter = str.substr(0, 1);
+      var newStr = firstLetter + str + firstLetter;
+      document.write(newStr);
+    </script>
+  </body>
+</html>

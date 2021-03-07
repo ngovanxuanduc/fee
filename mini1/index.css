@@ -1,0 +1,205 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  border-top: 0.3rem solid #edbc2c;
+  border-bottom: 0.3rem solid #edbc2c;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  margin: 0 7rem;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.sub-content {
+  margin-top: 1rem;
+  padding: 1rem 0rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.d-flex-c {
+  display: flex;
+  flex-direction: column;
+}
+.img-90 {
+  width: 90px;
+  height: 90px;
+}
+
+.row p {
+  width: 90%;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.img-90 img {
+  width: 100%;
+}
+
+.image-wrapper {
+  /* width: 300px; */
+  width: 100%;
+  padding-top: 60%;
+  border: 0.2rem solid white;
+  outline: 0.13rem solid #edbc2c;
+  background-image: url("Image/Taxi-driver.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+span {
+  font-size: 1.3rem;
+}
+
+.col {
+  /* padding: 0rem 1rem; */
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  width: calc(100% / 4);
+  /* margin-left: 4rem;
+  margin-right: 4rem; */
+}
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: lighter;
+  padding: 1rem 5rem;
+  border-top-right-radius: 10rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  margin-top: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.circles::before {
+  content: "";
+  width: 400%;
+  border-bottom: solid 0.3rem #edbc2c;
+  position: absolute;
+  right: 200%;
+  top: 50%;
+}
+
+.circles::after {
+  content: "";
+  width: 400%;
+  border-bottom: solid 0.3rem #edbc2c;
+  position: absolute;
+  left: 200%;
+  top: 50%;
+  z-index: 1;
+}
+
+.circles {
+  height: 1.1rem;
+  width: 1.1rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0.35rem solid #edbc2c;
+  display: inline-block;
+  position: relative;
+}
+
+.sub-header {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.d-flex-c.content-center.sub-header {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.line {
+  height: 0.2rem;
+  background: #edbc2c;
+  width: 4rem;
+}
+
+/* Combinators */
+.row.d-flex {
+  margin: 0 7rem;
+  padding: 3rem 3rem;
+  /* flex-wrap: wrap; */
+}
+
+.d-flex-c.content-center {
+  margin: 0rem 1rem;
+}
+
+/* color */
+.bg-dark {
+  background-color: #1e272e;
+}
+
+.text-light {
+  color: #ffffff;
+}
+
+.bg-main {
+  background-color: #edbc2c;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* Tablet */
+@media only screen and (max-width: 960px) {
+  .col {
+    width: calc(100% / 2);
+  }
+  .content.d-flex {
+    flex-wrap: wrap;
+  }
+  .row.d-flex {
+    margin: 0 0rem;
+  }
+}
+/* Mobile */
+
+@media only screen and (max-width: 576px) {
+  .col {
+    width: calc(100% / 1);
+  }
+  .row.d-flex {
+    margin: 0 0rem;
+    flex-wrap: wrap;
+  }
+}

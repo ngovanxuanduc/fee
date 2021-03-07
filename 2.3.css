@@ -4,13 +4,15 @@ body {
   margin: 0 auto;
   font-family: sans-serif;
   height: 100vh;
+  width: 100vw;
   display: flex;
+  justify-content: space-between;
 }
 
 .container-fluid {
   background-image: url("bmw.png");
   height: 50vh;
-  width: 50vw;
+  width: 30vw;
   margin: auto auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,4 +65,12 @@ h3 {
 
 .over-lay:hover {
   opacity: 1;
+}
+
+.container-fluid:first-child {
+  background-image: url("268330.jpg");
+}
+
+.container-fluid:nth-child(3) {
+  background-image: url("268341.jpg");
 }
