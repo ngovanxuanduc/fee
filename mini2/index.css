@@ -1,0 +1,63 @@
+body {
+  background-color: rgba(234, 234, 234);
+}
+
+div.img-wrapper {
+  width: 40%;
+}
+
+div.article-detail {
+  max-width: 60%;
+}
+
+div.img {
+  padding-top: 60%;
+  width: 100%;
+  background-color: red;
+}
+
+.article .img-wrapper .img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cbt-card {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.article {
+  margin-bottom: 1rem;
+  transition-duration: 0.3s;
+}
+
+.article:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.article-detail {
+  flex-grow: 1;
+}
+
+.services {
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 991px) {
+  div.img-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  div.article {
+    flex-wrap: wrap;
+  }
+
+  div.article-detail {
+    max-width: 100%;
+  }
+}

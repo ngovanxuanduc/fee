@@ -1,0 +1,80 @@
+:root {
+  --dark: #2c3a47;
+  --light: #dff9fb;
+  --grey: rgba(223, 249, 251, 0.5);
+  --light-dim: #ffffff;
+  --main: #ffa627;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+div.col__head {
+  font-family: "Bree Serif", serif;
+}
+
+div.section {
+  display: flex;
+  padding: 3rem 0;
+}
+
+div.section.bg-dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+div.service div.service__signature img {
+  width: 80px;
+  margin: 0.5rem 0;
+}
+
+div.container {
+  width: 977px;
+  margin: auto;
+}
+
+div.flex-c-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.service {
+  width: calc(100% / 3);
+}
+
+div.service div.service__description p {
+  text-align: center;
+}
+
+div.service div.service__action a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+/** size */
+
+div.service div.service__name {
+  font-size: 2.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+div.service div.service__action {
+  text-transform: uppercase;
+}
+
+div.service div.service__description {
+  font-size: 0.9em;
+  color: var(--grey);
+}
+
+/**color **/
+
+div.service div.service__signature {
+  color: var(--main);
+}
