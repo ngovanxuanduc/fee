@@ -86,7 +86,7 @@ div.col h3.text-uppercase {
   padding-top: 60%;
   border: 0.2rem solid white;
   outline: 0.13rem solid #edbc2c;
-  background-image: url("Image/Taxi-driver.jpg");
+
   background-position: center;
   background-size: cover;
 }
@@ -239,6 +239,7 @@ div.container
   .sub-content
   > .d-flex {
   padding: 0 1rem;
+  margin-bottom: 0.5rem;
 }
 /* div.container > div.content:nth-child(4) .col:hover div.image-wrapper {
   transform: scale(1.06);

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.3</title>
+    <link rel="stylesheet" href="bootstrap-4.6.0/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="bootstrap-4.6.0/js/jquery-3.5.1.slim.min.js" /> -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <!-- <script src="bootstrap-4.6.0/js/jquery-3.5.1.slim.min.js"></script> -->
+    <style>
+      .is-invalid ~ .invalid-feedback {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form1" action="/7.3.html" onsubmit="fnSubmit()">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h2>Personal Info</h2>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-6">
+                  <label for="first-name" class="font-weight-bold"
+                    >First Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first-name"
+                    aria-describedby="emailHelp"
+                    placeholder="First Name"
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a First Name
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label for="last-name" class="font-weight-bold"
+                    >Last Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last-name"
+                    aria-describedby="emailHelp"
+                    placeholder="Last Name"
+                  />
+                  <div class="invalid-feedback">Please provide a Last Name</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-6">
+                  <label for="email" class="font-weight-bold">Email</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    placeholder="Email"
+                  />
+                  <div class="invalid-feedback">Please provide a Email</div>
+                </div>
+                <div class="col-6">
+                  <label for="phone" class="font-weight-bold">Phone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    aria-describedby="emailHelp"
+                    placeholder="Phone"
+                  />
+                  <div class="invalid-feedback">Please provide a Phone</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="address" class="font-weight-bold">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    aria-describedby="emailHelp"
+                    placeholder="Address"
+                  />
+                  <div class="invalid-feedback">Please provide Address</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-6">
+                  <label for="city" class="font-weight-bold">City</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    aria-describedby="emailHelp"
+                    placeholder="New York"
+                  />
+                  <div class="invalid-feedback">Please provide City name</div>
+                </div>
+                <div class="col-6">
+                  <div class="form-row">
+                    <div class="col-8">
+                      <label for="state" class="font-weight-bold">State</label>
+                      <select class="form-control" id="state">
+                        <option selected="selected" disabled value="--none--">
+                          Choose...
+                        </option>
+                        <option value="Texas">Texas</option>
+                        <option value="Ohio">Ohio</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid state.
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <label for="zip-code" class="font-weight-bold"
+                        >Zipcode</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="zip-code"
+                        aria-describedby="emailHelp"
+                      />
+                      <div class="invalid-feedback">
+                        Please provide a valid zip.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- nua con lai -->
+          <div class="col-6">
+            <h2>Payment Info</h2>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="name-on-card" class="font-weight-bold"
+                    >Name on Card</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name-on-card"
+                    aria-describedby="emailHelp"
+                    placeholder="Name on Card"
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a Name on Card.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="credit-card" class="font-weight-bold"
+                    >Credit card number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="credit-card"
+                    aria-describedby="emailHelp"
+                    placeholder="1111-2222-3333-4444"
+                    onkeydown="reformatCreditNumber()"
+                    maxlength="19"
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid credit card number.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="exp-month" class="font-weight-bold"
+                    >Exp Month</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exp-month"
+                    aria-describedby="emailHelp"
+                    placeholder="07"
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid Exp Month.
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="exp-year" class="font-weight-bold"
+                    >Exp Year</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exp-year"
+                    aria-describedby="emailHelp"
+                    placeholder="2018"
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid Exp year.
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="cvv" class="font-weight-bold">CVV</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cvv"
+                    aria-describedby="emailHelp"
+                    placeholder="352"
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid Cvv.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="font-weight-bold"
+                >Accepted Cards</label
+              >
+              <div>
+                <a href=""
+                  ><i
+                    class="fab fa-cc-visa fa-2x"
+                    style="color: blue; font-size: 2.5rem"
+                  ></i
+                ></a>
+                <a href="">
+                  <i
+                    class="fab fa-cc-mastercard fa-2x"
+                    style="color: red; font-size: 2.5rem"
+                  ></i
+                ></a>
+                <a href=""
+                  ><i
+                    class="fab fa-cc-discover fa-2x"
+                    style="color: orange; font-size: 2.5rem"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <div class="custom-control custom-checkbox mr-sm-2">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customControlAutosizing"
+              />
+              <label
+                class="custom-control-label font-weight-bold"
+                for="customControlAutosizing"
+                >Check me out</label
+              >
+              <div class="invalid-feedback">
+                You must Check me out submitting.
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Sign in</button>
+      </div>
+    </form>
+    <script src="7.3.js"></script>
+  </body>
+</html>

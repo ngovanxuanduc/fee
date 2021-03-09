@@ -1,0 +1,58 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /* margin: 0 2rem; */
+  width: 50%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 2rem; */
+}
+
+.d-flex-c span {
+  padding: 0.5rem;
+}
+
+.col {
+  width: calc(100% / 2);
+}
+
+.image-wrapper {
+  width: 100%;
+}
+
+.image-wrapper img {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  /* padding: 1rem; */
+}
+
+.row:last-child {
+  width: auto;
+}
+
+input {
+  text-align: center;
+}
